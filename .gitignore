@@ -16,3 +16,4 @@ node_modules
 
 src/js/components/*
 .idea
+assets
