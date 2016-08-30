@@ -7,8 +7,13 @@
 var render = require("../instances/render");
 
 module.exports = (router) => {
-   router.get("/home",function *(){
+    router.get("/home",function *(){
        var ctx = this;
        ctx.body = yield render("example.html");
-   });
+    });
+
+    router.get("/index",function *() {
+        var ctx = this;
+        ctx.body = yield render("index.html");
+    });
 };
