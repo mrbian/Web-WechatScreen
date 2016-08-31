@@ -93,13 +93,14 @@ app.use(serve(staticDir, {
 }));
 
 app = http.createServer(app.callback());
-
-app.listen(pkg.localServer.port, "127.0.0.1", () => {
-    var url = util.format("http://%s:%d", "localhost", pkg.localServer.port);
-
-    console.log("Listening at %s", url);
-
-    // open(url);
-});
+app.listen(pkg.localServer.port);
+// 这里限制了只能本地访= - =
+// app.listen(pkg.localServer.port, "127.0.0.1", () => {
+//     var url = util.format("http://%s:%d", "localhost", pkg.localServer.port);
+//
+//     console.log("Listening at %s", url);
+//
+//     // open(url);
+// });
 
 module.exports = app;

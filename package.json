@@ -4,7 +4,7 @@
   "description": "",
   "main": "make-webpack.config.js",
   "scripts": {
-    "start": "gulp dev-build && supervisor -i src,assets server/app",
+    "start": "gulp dev-build && supervisor -i src,assets,mock server/app",
     "build": "gulp",
     "start-release": "node server/app production",
     "deploy": "gulp deploy",
@@ -26,11 +26,12 @@
     "del": "^2.2.1",
     "ect": "^0.5.9",
     "es6-promise": "^3.2.1",
+    "exports-loader": "^0.6.3",
+    "gulp-watch": "^4.3.9",
     "koa-proxy": "^0.3.0",
     "lodash": "^3.10.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "gulp-watch": "^4.3.9",
     "superagent": "^2.2.0",
     "superagent-charset": "^1.1.1",
     "superagent-promise-plugin": "^3.2.0"

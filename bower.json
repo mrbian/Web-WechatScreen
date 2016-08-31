@@ -22,7 +22,7 @@
     "jquery": "~2.1.4",
     "jquery-validation": "https://github.com/jzaefferer/jquery-validation.git#~1.14.0",
     
-    "react": "^15.2.0",
+    "react": "^15.1.0",
     
     
     "amazeui": "~2.4.2"

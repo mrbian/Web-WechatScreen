@@ -6,14 +6,34 @@
  */
 var res = [
     {
-        id: 1,
-        title: "foo",
-        content: "content foo"
+        id : 1,
+        headImg: "",
+        nickName : "流年如光",
+        content : "上墙了"
     },
     {
-        id: 2,
-        title: "title bar",
-        content: "content bar"
+        id : 2,
+        headImg: "",
+        nickName : "卞留念",
+        content : "测试一下"
+    },
+    {
+        id : 3,
+        headImg: "",
+        nickName : "卞1",
+        content : "测试一下"
+    },
+    {
+        id : 4,
+        headImg: "",
+        nickName : "卞2",
+        content : "测试一下"
+    },
+    {
+        id : 5,
+        headImg: "",
+        nickName : "卞3",
+        content : "测试一下"
     }
 ];
 
