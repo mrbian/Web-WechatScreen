@@ -199,29 +199,18 @@ div.ctrl-btn{
 }
 
 .list-enter {
-  left: 100%;
 }
 .list-enter-active {
-  left: 0;
-  transition: left 300ms ease-in;
+
 }
 .list-leave {
-  -webkit-transform: translate3d(0,0,0);
-  -moz-transform: translate3d(0,0,0);
-  -ms-transform: translate3d(0,0,0);
-  -o-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+
 }
 .list-leave-active {
-  transition: all 300ms ease-in;
-  -webkit-transform: translate3d(0, $transition-move-length, 0);
-  -moz-transform: translate3d(0, $transition-move-length, 0);
-  -ms-transform: translate3d(0, $transition-move-length, 0);
-  -o-transform: translate3d(0, $transition-move-length, 0);
-  transform: translate3d(0, $transition-move-length, 0);
 }
 
 .move{
+  transition: all 600ms linear;
   -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
@@ -230,7 +219,6 @@ div.ctrl-btn{
 }
 
 .move.active{
-  transition: all 300ms ease-in;
   -webkit-transform: translate3d(0, $transition-move-length, 0);
   -moz-transform: translate3d(0, $transition-move-length, 0);
   -ms-transform: translate3d(0, $transition-move-length, 0);

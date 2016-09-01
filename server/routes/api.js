@@ -11,4 +11,8 @@ module.exports = (router) => {
     router.get("/api/example",proxy({
         host: config.host
     }));
+    
+    router.get("/api/message",function *() {
+        
+    });
 };

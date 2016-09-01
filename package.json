@@ -5,12 +5,10 @@
   "main": "make-webpack.config.js",
   "scripts": {
     "start": "gulp dev-build && supervisor -i src,assets,mock server/app",
-    "build": "gulp",
     "start-release": "node server/app production",
+    "pack": "gulp",
     "deploy": "gulp deploy",
-    "webpack-dev": "webpack --config webpack-dev.config.js",
-    "add-html": "gulp add",
-    "dev-build": "gulp dev-build"
+    "add-html": "gulp add"
   },
   "repository": {
     "type": "git",
@@ -21,13 +19,18 @@
   "localServer": {
     "port": 3010
   },
+  "remoteServer" : {
+      "staticePrefix" : "/dist/"
+  },
   "dependencies": {
     "co-views": "^2.1.0",
     "del": "^2.2.1",
     "ect": "^0.5.9",
     "es6-promise": "^3.2.1",
     "exports-loader": "^0.6.3",
+    "gulp-ect": "^1.3.1",
     "gulp-watch": "^4.3.9",
+    "imports-loader": "^0.6.5",
     "koa-proxy": "^0.3.0",
     "lodash": "^3.10.1",
     "react": "^15.1.0",
