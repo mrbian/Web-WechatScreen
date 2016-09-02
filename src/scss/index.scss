@@ -201,7 +201,25 @@ div.ctrl-btn{
 .list-enter {
 }
 .list-enter-active {
-
+  -webkit-transform: translate3d(0, $transition-move-length, 0);
+  -moz-transform: translate3d(0, $transition-move-length, 0);
+  -ms-transform: translate3d(0, $transition-move-length, 0);
+  -o-transform: translate3d(0, $transition-move-length, 0);
+  transform: translate3d(0, $transition-move-length, 0);
+}
+.list-appear{
+  -webkit-transform: translate3d(0, $transition-move-length, 0);
+  -moz-transform: translate3d(0, $transition-move-length, 0);
+  -ms-transform: translate3d(0, $transition-move-length, 0);
+  -o-transform: translate3d(0, $transition-move-length, 0);
+  transform: translate3d(0, $transition-move-length, 0);
+}
+.list-appear-active{
+  -webkit-transform: translate3d(0, $transition-move-length, 0);
+  -moz-transform: translate3d(0, $transition-move-length, 0);
+  -ms-transform: translate3d(0, $transition-move-length, 0);
+  -o-transform: translate3d(0, $transition-move-length, 0);
+  transform: translate3d(0, $transition-move-length, 0);
 }
 .list-leave {
 
