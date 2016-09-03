@@ -199,27 +199,11 @@ div.ctrl-btn{
 }
 
 .list-enter {
+  opacity: 0;
 }
 .list-enter-active {
-  -webkit-transform: translate3d(0, $transition-move-length, 0);
-  -moz-transform: translate3d(0, $transition-move-length, 0);
-  -ms-transform: translate3d(0, $transition-move-length, 0);
-  -o-transform: translate3d(0, $transition-move-length, 0);
-  transform: translate3d(0, $transition-move-length, 0);
-}
-.list-appear{
-  -webkit-transform: translate3d(0, $transition-move-length, 0);
-  -moz-transform: translate3d(0, $transition-move-length, 0);
-  -ms-transform: translate3d(0, $transition-move-length, 0);
-  -o-transform: translate3d(0, $transition-move-length, 0);
-  transform: translate3d(0, $transition-move-length, 0);
-}
-.list-appear-active{
-  -webkit-transform: translate3d(0, $transition-move-length, 0);
-  -moz-transform: translate3d(0, $transition-move-length, 0);
-  -ms-transform: translate3d(0, $transition-move-length, 0);
-  -o-transform: translate3d(0, $transition-move-length, 0);
-  transform: translate3d(0, $transition-move-length, 0);
+  opacity: 1;
+  transition: all 600ms linear;
 }
 .list-leave {
 
@@ -228,12 +212,12 @@ div.ctrl-btn{
 }
 
 .move{
-  transition: all 600ms linear;
   -webkit-transform: translate3d(0,0,0);
   -moz-transform: translate3d(0,0,0);
   -ms-transform: translate3d(0,0,0);
   -o-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+  transition: all 600ms linear;
 }
 
 .move.active{

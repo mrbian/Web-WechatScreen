@@ -38,6 +38,9 @@ var ScrollList = React.createClass({
         this.setState({
             messages : msgArr
         });
+        if(this.state.messages.length >= 4){
+            this.scroll();
+        }
     },
     /**
      * 滚动函数
@@ -51,12 +54,16 @@ var ScrollList = React.createClass({
         var lists = el.getElementsByClassName("scroll-content");
         var translate = this.state.translate;
         var idx = translate / -172 - 1;
-        if(idx === lists.length - 4){      // 如果最后一个数据是最新的且需要移动
-            console.log("最后一个");
-            window.getComputedStyle(lists[lists.length - 1]);  // 设置生效
-        }
         for(var i = 0; i < 5 && i + idx < lists.length;i ++){           // 考虑到性能，只遍历4次
             if(lists[idx + i].nodeType == 1){
+                if(idx + i === lists.length - 1) {      // 如果滚动出来的是最新的
+                    lists[idx + i].style.transform = "translate3d(0px,"+ (translate + 172)+ "px),0px";
+                    lists[idx + i].style.webkitTransform = "translate3d(0px,"+ (translate + 172)+ "px,0px)";
+                    lists[idx + i].style.mozTransform = "translate3d(0px,"+ (translate + 172) + "px,0px)";
+                    lists[idx + i].style.msTransform = "translate3d(0px,"+ (translate + 172) + "px,0px)";
+                    getComputedStyle(lists[idx + i]).transform;  // 强制重刷DOM
+                    getComputedStyle(lists[idx + i]).webkitTransform;  // 强制重刷DOM
+                }
                 lists[idx + i].style.transform = "translate3d(0px,"+ translate + "px),0px";
                 lists[idx + i].style.webkitTransform = "translate3d(0px,"+ translate + "px,0px)";
                 lists[idx + i].style.mozTransform = "translate3d(0px,"+ translate + "px,0px)";
@@ -77,7 +84,7 @@ var ScrollList = React.createClass({
         });
         return (
         <div id="content" className="contentWrap">
-                <ReactCSSTransitionGroup transitionAppear={true} component="div" transitionName="list" transitionEnterTimeout={800} transitionLeaveTimeout={800}>
+                <ReactCSSTransitionGroup component="div" transitionName="list" transitionEnterTimeout={800} transitionLeaveTimeout={800}>
                     {scrollNodes}
                 </ReactCSSTransitionGroup>
                 <div className="am-btn am-btn-default ctrl-btn" onClick={this.scroll}>
